@@ -45,7 +45,14 @@ class ClasesActivity : AppCompatActivity() {
             dato.aula     = txtAula.text.toString()
 
             Clases.Clases.put(dato.codigo, dato)
-            Toast.makeText(applicationContext, "Datos agregados", Toast.LENGTH_LONG).show()
+            Toast.makeText(applicationContext, "Datos agregados", Toast.LENGTH_SHORT).show()
+
+            txtCodigo.text   = null
+            txtNombre2.text  = null
+            txtSeccion.text  = null
+            txtHora.text     = null
+            txtEdificio.text = null
+            txtAula.text     = null
         }
     }
 }

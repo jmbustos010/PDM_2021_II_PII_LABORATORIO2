@@ -1,5 +1,6 @@
 package hn.edu.ujcv.pdm_2021_ii_pii_laboratorio2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ArrayAdapter
@@ -19,8 +20,13 @@ class NotasActivity : AppCompatActivity() {
         inicializarMatriculas()
         btnBuscarClases.setOnClickListener { buscarClases() }
         btnGuardarNotas.setOnClickListener { guardarNotas() }
+        btnRegresar4.setOnClickListener { regresar() }
     }
 
+    private fun regresar() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+    }
 
 
     private fun inicializarMatriculas(){
@@ -82,10 +88,8 @@ class NotasActivity : AppCompatActivity() {
                     }
                 }
             }
-            var prueba = Alumnos.Matriculas
-            Toast.makeText(applicationContext, "pruebita", Toast.LENGTH_SHORT).show()
+            Toast.makeText(applicationContext, "Notas agrgadas", Toast.LENGTH_SHORT).show()
         }
-
         txtNota1.text = null
         txtNota2.text = null
         txtNota3.text = null

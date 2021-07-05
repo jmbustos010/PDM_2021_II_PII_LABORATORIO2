@@ -14,7 +14,7 @@
         android:layout_marginStart="67dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="67dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginBottom="568dp"
         android:text="Registro de notas"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -24,7 +24,7 @@
         android:textColorLink="#FFFFFF"
         android:textSize="25dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/txvAlumnos"
+        app:layout_constraintBottom_toTopOf="@+id/btnGuardarNotas"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -33,9 +33,7 @@
         android:id="@+id/txvAlumnos"
         android:layout_width="268dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="56dp"
-        android:layout_marginBottom="286dp"
+        android:layout_marginStart="18dp"
         android:text="Seleccione un alumno:"
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -45,9 +43,9 @@
         android:textColorLink="#FFFFFF"
         android:textSize="25dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/txvNota2"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerAlumnos"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/btnRegresar4" />
 
     <TextView
         android:id="@+id/txvClases"
@@ -75,7 +73,7 @@
         android:layout_width="219dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
-        android:layout_marginBottom="39dp"
+        android:layout_marginBottom="50dp"
         android:text="Ingrese las notas: "
         android:textAlignment="center"
         android:textAllCaps="false"
@@ -85,7 +83,7 @@
         android:textColorLink="#FFFFFF"
         android:textSize="25dp"
         android:textStyle="bold|italic"
-        app:layout_constraintBottom_toTopOf="@+id/txtNota1"
+        app:layout_constraintBottom_toTopOf="@+id/txvNota2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerClases" />
 
@@ -93,21 +91,22 @@
         android:id="@+id/spinnerAlumnos"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="5dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="17dp"
         app:layout_constraintBottom_toTopOf="@+id/txvClases"
         app:layout_constraintEnd_toEndOf="@+id/spinnerClases"
-        app:layout_constraintStart_toStartOf="@+id/txvAlumnos"
+        app:layout_constraintStart_toStartOf="@+id/txvClases"
         app:layout_constraintTop_toBottomOf="@+id/txvAlumnos" />
 
     <Spinner
         android:id="@+id/spinnerClases"
-        android:layout_width="176dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="16dp"
         android:layout_marginBottom="37dp"
         app:layout_constraintBottom_toTopOf="@+id/txvNotas"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnBuscarClases"
+        app:layout_constraintStart_toStartOf="@+id/txvClases"
         app:layout_constraintTop_toBottomOf="@+id/txvClases" />
 
     <TextView
@@ -128,12 +127,13 @@
     <EditText
         android:id="@+id/txtNota1"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="38dp"
         android:layout_marginEnd="259dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="33dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/txtNota2"
+        app:layout_constraintBottom_toTopOf="@+id/txvNota1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNota2"
         app:layout_constraintTop_toBottomOf="@+id/txvNotas" />
@@ -144,27 +144,28 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="21dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginBottom="29dp"
         android:text="N1:"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
         app:layout_constraintBottom_toTopOf="@+id/txvNota1"
         app:layout_constraintEnd_toStartOf="@+id/txtNota1"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txvAlumnos" />
+        app:layout_constraintTop_toBottomOf="@+id/txvNotas" />
 
     <EditText
         android:id="@+id/txtNota2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="66dp"
         android:layout_marginEnd="259dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="66dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/txtNota3"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNota3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNota1"
-        app:layout_constraintTop_toBottomOf="@+id/txtNota1" />
+        app:layout_constraintTop_toTopOf="@+id/txtNota1" />
 
     <TextView
         android:id="@+id/txvNota3"
@@ -172,11 +173,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="19dp"
         android:layout_marginEnd="21dp"
-        android:layout_marginBottom="172dp"
+        android:layout_marginBottom="53dp"
         android:text="N3:"
         android:textColor="#FFFFFF"
         android:textSize="25dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/btnBuscarClases"
         app:layout_constraintEnd_toStartOf="@+id/txtNota3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txvNota1" />
@@ -184,39 +185,64 @@
     <EditText
         android:id="@+id/txtNota3"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="42dp"
+        android:layout_marginTop="57dp"
         android:layout_marginEnd="259dp"
-        android:layout_marginBottom="54dp"
+        android:layout_marginBottom="55dp"
         android:ems="10"
         android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/btnGuardarNotas"
+        app:layout_constraintBottom_toTopOf="@+id/btnBuscarClases"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txvNota3"
-        app:layout_constraintTop_toBottomOf="@+id/txtNota2" />
+        app:layout_constraintTop_toTopOf="@+id/txvNota1" />
 
     <Button
         android:id="@+id/btnBuscarClases"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="21dp"
-        android:layout_marginEnd="18dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="@color/design_default_color_secondary_variant"
         android:text="Buscar clases"
-        app:layout_constraintBaseline_toBaselineOf="@+id/btnGuardarNotas"
+        app:icon="?android:attr/actionModeWebSearchDrawable"
+        app:iconSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnGuardarNotas"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvNota3" />
 
     <Button
         android:id="@+id/btnGuardarNotas"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="70dp"
+        android:layout_marginEnd="38dp"
+        android:layout_marginBottom="60dp"
         android:backgroundTint="@color/design_default_color_secondary_variant"
         android:text="Guardar notas"
+        app:icon="?attr/actionModePasteDrawable"
+        app:iconSize="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/btnBuscarClases"
-        app:layout_constraintTop_toBottomOf="@+id/txtNota3" />
+        app:layout_constraintTop_toBottomOf="@+id/txvTitulo" />
+
+    <Button
+        android:id="@+id/btnRegresar4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="14dp"
+        android:background="#00EF5350"
+        android:backgroundTint="#00FFFFFF"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold|italic"
+        app:icon="?attr/actionModeCloseDrawable"
+        app:iconTint="#FFFFFF"
+        app:layout_constraintBottom_toTopOf="@+id/txvAlumnos"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

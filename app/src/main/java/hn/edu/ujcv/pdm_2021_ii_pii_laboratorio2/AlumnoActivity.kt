@@ -39,6 +39,10 @@ class AlumnoActivity : AppCompatActivity() {
 
             Alumnos.Alumnos.put(dato.NumeroCuenta, dato)
             Toast.makeText(applicationContext, "Datos agregados", Toast.LENGTH_SHORT).show()
+
+            txtNumCuenta.text = null
+            txtNombre.text    = null
+            txtCorreo.text    = null
         }
     }
 }
